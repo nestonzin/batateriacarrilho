@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carrilhos Batateria</title>
+  </head>
+
+  <body onscroll="onScroll()">
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#home">
+          <svg
+            width="185"
+            height="24"
+            viewBox="0 0 185 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.32 23.384C9.05867 23.384 7.11734 22.904 5.496 21.944C3.87467 20.9627 2.62667 19.608 1.752 17.88C0.877336 16.1307 0.440002 14.1147 0.440002 11.832C0.440002 9.54934 0.877336 7.53334 1.752 5.784C2.62667 4.03467 3.87467 2.66934 5.496 1.688C7.11734 0.70667 9.05867 0.216003 11.32 0.216003C14.008 0.216003 16.2053 0.888003 17.912 2.232C19.64 3.55467 20.7173 5.42134 21.144 7.832H16.632C16.3547 6.616 15.7573 5.66667 14.84 4.984C13.944 4.28 12.7493 3.928 11.256 3.928C9.18667 3.928 7.56534 4.632 6.392 6.04C5.21867 7.448 4.632 9.37867 4.632 11.832C4.632 14.2853 5.21867 16.216 6.392 17.624C7.56534 19.0107 9.18667 19.704 11.256 19.704C12.7493 19.704 13.944 19.384 14.84 18.744C15.7573 18.0827 16.3547 17.176 16.632 16.024H21.144C20.7173 18.328 19.64 20.1307 17.912 21.432C16.2053 22.7333 14.008 23.384 11.32 23.384Z"
+              fill="#E5E5E5"
+            />
+            <path
+              d="M23.0485 23L31.2405 0.600002H35.8485L44.0405 23H39.6885L37.8965 17.816H29.1605L27.3365 23H23.0485ZM30.2805 14.616H36.7765L33.5125 5.304L30.2805 14.616Z"
+              fill="#E5E5E5"
+            />
+            <path
+              d="M46.926 23V0.600002H55.15C56.942 0.600002 58.414 0.909336 59.566 1.528C60.7393 2.12534 61.614 2.94667 62.19 3.992C62.766 5.016 63.054 6.15734 63.054 7.416C63.054 8.78134 62.6913 10.0293 61.966 11.16C61.262 12.2907 60.1527 13.112 58.638 13.624L63.278 23H58.574L54.414 14.168H51.022V23H46.926ZM51.022 11.16H54.894C56.2593 11.16 57.262 10.8293 57.902 10.168C58.542 9.50667 58.862 8.632 58.862 7.544C58.862 6.47733 58.542 5.624 57.902 4.984C57.2833 4.344 56.27 4.024 54.862 4.024H51.022V11.16Z"
+              fill="#E5E5E5"
+            />
+            <path
+              d="M66.8635 23V0.600002H75.0875C76.8795 0.600002 78.3515 0.909336 79.5035 1.528C80.6768 2.12534 81.5515 2.94667 82.1275 3.992C82.7035 5.016 82.9915 6.15734 82.9915 7.416C82.9915 8.78134 82.6288 10.0293 81.9035 11.16C81.1995 12.2907 80.0902 13.112 78.5755 13.624L83.2155 23H78.5115L74.3515 14.168H70.9595V23H66.8635ZM70.9595 11.16H74.8315C76.1968 11.16 77.1995 10.8293 77.8395 10.168C78.4795 9.50667 78.7995 8.632 78.7995 7.544C78.7995 6.47733 78.4795 5.624 77.8395 4.984C77.2208 4.344 76.2075 4.024 74.7995 4.024H70.9595V11.16Z"
+              fill="#E5E5E5"
+            />
+            <path d="M86.801 23V0.600002H90.897V23H86.801Z" fill="#E5E5E5" />
+            <path
+              d="M95.2385 23V0.600002H99.3345V19.8H109.255V23H95.2385Z"
+              fill="#E5E5E5"
+            />
+            <path
+              d="M112.864 23V0.600002H116.96V9.912H127.008V0.600002H131.104V23H127.008V13.24H116.96V23H112.864Z"
+              fill="#E5E5E5"
+            />
+            <path
+              d="M145.953 23.384C143.713 23.384 141.751 22.8933 140.065 21.912C138.401 20.9307 137.089 19.576 136.129 17.848C135.191 16.0987 134.721 14.0827 134.721 11.8C134.721 9.51734 135.191 7.512 136.129 5.784C137.089 4.03467 138.401 2.66934 140.065 1.688C141.751 0.70667 143.713 0.216003 145.953 0.216003C148.172 0.216003 150.124 0.70667 151.809 1.688C153.495 2.66934 154.807 4.03467 155.745 5.784C156.684 7.512 157.153 9.51734 157.153 11.8C157.153 14.0827 156.684 16.0987 155.745 17.848C154.807 19.576 153.495 20.9307 151.809 21.912C150.124 22.8933 148.172 23.384 145.953 23.384ZM145.953 19.704C148.087 19.704 149.783 19 151.041 17.592C152.321 16.184 152.961 14.2533 152.961 11.8C152.961 9.34667 152.321 7.416 151.041 6.008C149.783 4.6 148.087 3.896 145.953 3.896C143.82 3.896 142.113 4.6 140.833 6.008C139.553 7.416 138.913 9.34667 138.913 11.8C138.913 14.2533 139.553 16.184 140.833 17.592C142.113 19 143.82 19.704 145.953 19.704Z"
+              fill="#E5E5E5"
+            />
+            <path
+              d="M159.906 8.472L161.666 0.600002H165.986L162.722 8.472H159.906Z"
+              fill="#E5E5E5"
+            />
+            <path
+              d="M176.855 23.384C175.213 23.384 173.762 23.1067 172.503 22.552C171.245 21.976 170.253 21.1653 169.527 20.12C168.802 19.0533 168.429 17.7627 168.407 16.248H172.727C172.77 17.2933 173.143 18.1787 173.847 18.904C174.573 19.608 175.565 19.96 176.823 19.96C177.911 19.96 178.775 19.704 179.415 19.192C180.055 18.6587 180.375 17.9547 180.375 17.08C180.375 16.1627 180.087 15.448 179.511 14.936C178.957 14.424 178.21 14.008 177.271 13.688C176.333 13.368 175.33 13.0267 174.263 12.664C172.535 12.0667 171.213 11.2987 170.295 10.36C169.399 9.42134 168.951 8.17334 168.951 6.616C168.93 5.29334 169.239 4.16267 169.879 3.224C170.541 2.264 171.437 1.528 172.567 1.016C173.698 0.48267 174.999 0.216003 176.471 0.216003C177.965 0.216003 179.277 0.48267 180.407 1.016C181.559 1.54934 182.455 2.296 183.095 3.256C183.757 4.216 184.109 5.35734 184.151 6.68H179.767C179.746 5.89067 179.437 5.19734 178.839 4.6C178.263 3.98134 177.453 3.672 176.407 3.672C175.511 3.65067 174.754 3.87467 174.135 4.344C173.538 4.792 173.239 5.45334 173.239 6.328C173.239 7.07467 173.474 7.672 173.943 8.12C174.413 8.54667 175.053 8.90934 175.863 9.208C176.674 9.50667 177.602 9.82667 178.647 10.168C179.757 10.552 180.77 11 181.687 11.512C182.605 12.024 183.341 12.7067 183.895 13.56C184.45 14.392 184.727 15.4693 184.727 16.792C184.727 17.9653 184.429 19.0533 183.831 20.056C183.234 21.0587 182.349 21.8693 181.175 22.488C180.002 23.0853 178.562 23.384 176.855 23.384Z"
+              fill="#E5E5E5"
+            />
+          </svg>
+        </a>
+
+        <div class="menu">
+          <ul>
+            <li><a onclick="closeMenu()" href="#home">Inicio </a></li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+          </ul>
+
+          <a class="button" onclick="closeMenu()" href="#contact"
+            >Peça uma batata</a
+          >
+
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#F2A71B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#F2A71B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#F2A71B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Seja bem vindo a Batateria Carrilhos 👋</h4>
+            <h1>A batata mais saborosa da região</h1>
+          </header>
+
+          <div class="content">
+            <p>As melhores combinações de tempero!</p>
+            <a class="button" href="#contact">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8337 11.6667C13.667 11.5833 12.5837 11.0833 12.417 11C12.2503 10.9167 12.0837 10.9167 11.917 11.0833C11.7503 11.25 11.417 11.75 11.2503 11.9167C11.167 12.0833 11.0003 12.0833 10.8337 12C10.2503 11.75 9.66699 11.4167 9.16699 11C8.75033 10.5833 8.33366 10.0833 8.00033 9.58334C7.91699 9.41668 8.00033 9.25001 8.08366 9.16668C8.16699 9.08334 8.25033 8.91668 8.41699 8.83334C8.50033 8.75001 8.58366 8.58334 8.58366 8.50001C8.66699 8.41668 8.66699 8.25001 8.58366 8.16668C8.50033 8.08334 8.08366 7.08334 7.91699 6.66668C7.83366 6.08334 7.66699 6.08334 7.50033 6.08334C7.41699 6.08334 7.25033 6.08334 7.08366 6.08334C6.91699 6.08334 6.66699 6.25001 6.58366 6.33334C6.08366 6.83334 5.83366 7.41668 5.83366 8.08334C5.91699 8.83334 6.16699 9.58334 6.66699 10.25C7.58366 11.5833 8.75033 12.6667 10.167 13.3333C10.5837 13.5 10.917 13.6667 11.3337 13.75C11.7503 13.9167 12.167 13.9167 12.667 13.8333C13.2503 13.75 13.7503 13.3333 14.0837 12.8333C14.2503 12.5 14.2503 12.1667 14.167 11.8333C14.167 11.8333 14.0003 11.75 13.8337 11.6667ZM15.917 4.08334C12.667 0.833344 7.41699 0.833344 4.16699 4.08334C1.50033 6.75001 1.00033 10.8333 2.83366 14.0833L1.66699 18.3333L6.08366 17.1667C7.33366 17.8333 8.66699 18.1667 10.0003 18.1667C14.5837 18.1667 18.2503 14.5 18.2503 9.91668C18.3337 7.75001 17.417 5.66668 15.917 4.08334ZM13.667 15.75C12.5837 16.4167 11.3337 16.8333 10.0003 16.8333C8.75033 16.8333 7.58366 16.5 6.50033 15.9167L6.25033 15.75L3.66699 16.4167L4.33366 13.9167L4.16699 13.6667C2.16699 10.3333 3.16699 6.16668 6.41699 4.08334C9.66699 2.00001 13.8337 3.08334 15.8337 6.25001C17.8337 9.50001 16.917 13.75 13.667 15.75Z"
+                  fill="white"
+                />
+              </svg>
+
+              Peça sua batata agora
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="assets/batata-frita-com-molhos.jpg"
+            alt="batata frita com molhos"
+          />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>71%</h3>
+            <p>
+              consideram terapia um dos top 3 benefícios que a empresa oferece
+            </p>
+          </div>
+          <div class="stat">
+            <h3>84%</h3>
+            <p>relatam impacto positivo em produtividade</p>
+          </div>
+          <div class="stat">
+            <h3>82%</h3>
+            <p>perceberam melhora no relacionamento com colegas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h4>Fome de batata!</h4>
+          <h2>Pra quem é apaixonado por batata.</h2>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Fome de batata!</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Fome de batata!</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Fome de batata!</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Fome de batata!</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Fome de batata!</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Fome de batata!</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Quem somos nós</h4>
+            <h2>😋</h2>
+          </header>
+
+          <div class="content">
+            <p>
+              As batatas além de serem deliciosas, são muito saudáveis. Elas
+              possuem muitas vitaminas e são uma grande fonte de fibra. A
+              Carrilho’s Batateria trabalhará com variados tipos de batatas e
+              diferentes formas de preparo para todos os gostos. Conta pra
+              gente, qual é o seu jeito favorito de comer batata? 🥔
+            </p>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="assets/batata-recheada.jpg"
+            alt="doutor feliz segurando prancheta com pacientes"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Peça agora mesmo!</h2>
+          </header>
+
+          <div class="content">
+            <ul>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="#F2A71B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="#F2A71B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Em breve em Cabo Frio, RJ.
+              </li>
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.99998C4.79086 2.99998 3 4.79085 3 6.99998V17C3 19.2091 4.79086 21 7 21H17C19.2091 21 21 19.2091 21 17V6.99998C21 4.79085 19.2091 2.99998 17 2.99998H7ZM1 6.99998C1 3.68628 3.68629 0.999985 7 0.999985H17C20.3137 0.999985 23 3.68628 23 6.99998V17C23 20.3137 20.3137 23 17 23H7C3.68629 23 1 20.3137 1 17V6.99998Z" fill="#F2A71B"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4833 8.98923C11.8591 8.89667 11.2217 9.00328 10.6616 9.29391C10.1015 9.58453 9.64727 10.0444 9.36357 10.608C9.07988 11.1716 8.98113 11.8104 9.08138 12.4334C9.18163 13.0564 9.47577 13.6319 9.92196 14.0781C10.3682 14.5243 10.9437 14.8184 11.5667 14.9187C12.1897 15.0189 12.8284 14.9202 13.392 14.6365C13.9557 14.3528 14.4155 13.8986 14.7061 13.3385C14.9968 12.7784 15.1034 12.1409 15.0108 11.5167C14.9164 10.88 14.6197 10.2906 14.1646 9.83546C13.7095 9.38032 13.12 9.08364 12.4833 8.98923ZM9.74043 7.51866C10.6739 7.03429 11.7364 6.8566 12.7767 7.01086C13.8379 7.16822 14.8203 7.66269 15.5788 8.42124C16.3374 9.1798 16.8318 10.1622 16.9892 11.2234C17.1435 12.2637 16.9658 13.3261 16.4814 14.2596C15.997 15.1931 15.2306 15.9501 14.2912 16.423C13.3518 16.8958 12.2873 17.0604 11.2489 16.8933C10.2106 16.7262 9.2514 16.236 8.50775 15.4923C7.76409 14.7487 7.27386 13.7895 7.10678 12.7511C6.9397 11.7128 7.10428 10.6482 7.5771 9.70883C8.04993 8.76943 8.80693 8.00304 9.74043 7.51866Z" fill="#F2A71B"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.49998C16.5 5.9477 16.9477 5.49998 17.5 5.49998H17.51C18.0623 5.49998 18.51 5.9477 18.51 6.49998C18.51 7.05227 18.0623 7.49998 17.51 7.49998H17.5C16.9477 7.49998 16.5 7.05227 16.5 6.49998Z" fill="#F2A71B"/>
+                    </svg>
+                    
+                @carrilhosbatateria
+              </li>
+            </ul>
+
+            <a
+              class="button"
+              href="https://wa.me/5521967307799"
+              target="_blank"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                  fill="white"
+                />
+              </svg>
+              Peça sua batata
+            </a>
+          </div>
+        </div>
+        <div class="col-b">
+          <img
+            src="assets/batata-assada-com-molho.jpg"
+            alt="desenho de um rosto com um coração e um esparadrapo na cabeça"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home"> </a>
+          <p>
+            ©2022 <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#F2A71B" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <!---------------- Lib -------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
